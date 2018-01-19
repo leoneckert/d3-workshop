@@ -34,7 +34,7 @@ d3.csv("NY2017.csv", function(data){
                     .domain([minDate, maxDate])
                     .range([0, width-100])
     ;
-    let minTemp = d3.min(data, function(d){ return parseInt(d.TMAX);});
+    let minTemp = d3.min(data, function(d){ return parseInt(d.TMIN);});
     let maxTemp = d3.max(data, function(d){ return parseInt(d.TMAX);});
     let yScale = d3.scaleLinear()
                         .domain([minTemp, maxTemp])
@@ -45,6 +45,7 @@ d3.csv("NY2017.csv", function(data){
     chartGroup.selectAll("circle")
                 .data(data)
                 .enter()
+                .filter(function(d) { return d.TMAX != "" }) 
                 .append("circle")
                     .attr("cx", function(d){
                         return xScale( parseTime( d.DATE) );
@@ -63,9 +64,6 @@ d3.csv("NY2017.csv", function(data){
                     .transition()
                     .duration(2000)
                     .attr("cy", function(d){
-                        if(yScale( d.TMAX ) == 0){
-                            console.log(d);
-                        }
                         return yScale( d.TMAX );
                     })
 

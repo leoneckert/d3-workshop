@@ -21,4 +21,4 @@ screenshot of inspector of moving svg
 
 The web is full of d3 examples, many of which are by d3 creator Mike Bostock on his web platform that is designed to share d3 examples: [https://bl.ocks.org](https://bl.ocks.org)
 
-(The documentation on github)[https://github.com/d3/d3/wiki] ( (actual functions etc are here)[https://github.com/d3/d3/blob/master/API.md] ) is also great (and extensive) explaining the latest v4 of d3 as well as older versions. V4 differs from older version and I recommend using it and not going back.
+[The documentation on github](https://github.com/d3/d3/wiki) ([actual functions etc are here](https://github.com/d3/d3/blob/master/API.md)) is also great (and extensive) explaining the latest v4 of d3 as well as older versions. V4 differs from older version and I recommend using it and not going back.
